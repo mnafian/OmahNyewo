@@ -115,9 +115,8 @@ public class OmhLoaderInfoWebService extends ListFragment {
 		swipeView = (SwipeRefreshLayout) view.findViewById(R.id.swipeView);
 		listDetail = new ArrayList<HashMap<String, String>>();
 
-		s
 			new LoadDataOmh().execute();
-		}
+
 		swipeView.setColorScheme(android.R.color.holo_blue_bright,
 				android.R.color.holo_green_light,
 				android.R.color.holo_orange_light,

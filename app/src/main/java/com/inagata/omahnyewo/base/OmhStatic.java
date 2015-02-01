@@ -1,6 +1,7 @@
 package com.inagata.omahnyewo.base;
 
 public class OmhStatic {
+    //Application key to server
 	public static final String PLACE_NAME = "nama";
 	public static final String PLACE_PRICE = "harga";
 	public static final String CATEGORY = "cat";
@@ -12,11 +13,13 @@ public class OmhStatic {
 	public static final String IMAGE = "gambar";
 	public static final String COORDINAT = "koordinat";
 	
-	
+	//link url
 	public static final String URL_WS = "http://cdn.omahnyewo.com/servicelist.php?type=";
 	public static final String IMAGE_URL_WS = "http://cdn.omahnyewo.com/res/";
-	public static long back_pressed;
 	
+    //back pressed properties
+    public static long back_pressed;
+    
 	public static final int MILLISECONDS_PER_SECOND = 1000;
 	public static final int UPDATE_INTERVAL_IN_SECONDS = 5;
 	public static final long UPDATE_INTERVAL = MILLISECONDS_PER_SECOND
