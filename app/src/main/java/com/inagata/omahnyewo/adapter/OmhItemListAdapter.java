@@ -53,7 +53,7 @@ public class OmhItemListAdapter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		TextView priceItem, alamatItem;
 		ImageView imageItem;
-s
+        
 		inflater = (LayoutInflater) mContext
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 

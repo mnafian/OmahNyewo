@@ -16,15 +16,49 @@
             android:padding="0dp" >
 
             <RelativeLayout
+                android:id="@+id/layout_image"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="200dp" >
 
                 <ImageView
                     android:id="@+id/image_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/omh_kost" />
+
             </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_price_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/layout_image"
+                android:text="Rp 100000/Tahun"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_alamat_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_price_detail"
+                android:layout_centerHorizontal="true"
+                android:text="Perum Gajayana Nomor 50 Malang"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <ImageView
+                android:id="@+id/logo_fas"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_below="@+id/text_alamat_detail"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/omh_line" />
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -33,35 +67,29 @@
             android:layout_weight="1.00"
             android:padding="0dp" >
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:id="@+id/text_alamat_detail"
+                    android:id="@+id/mini_fasilitas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_price_detail"
                     android:layout_centerHorizontal="true"
-                    android:text="Perum Gajayana Nomor 50 Malang"
+                    android:layout_marginTop="5dp"
+                    android:text="Fasilitas"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                <ImageView
-                    android:id="@+id/logo_fas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp"
-                    android:layout_below="@+id/text_alamat_detail"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/omh_line" />
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/pager"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/logo_fas"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="30dp"
                     android:background="@android:color/black" >
 
                     <com.inagata.omahnyewo.base.OmhHorizontalListView
@@ -76,32 +104,9 @@
                 </android.support.v4.view.ViewPager>
 
                 <TextView
-                    android:id="@+id/text_price_detail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:text="Rp 100000/Tahun"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="23sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/mini_fasilitas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_alamat_detail"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp"
-                    android:text="Fasilitas"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                <TextView
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/logo_fas"
                     android:layout_below="@+id/pager"
                     android:layout_marginTop="15dp"
                     android:text="Deskripsi :"
@@ -113,7 +118,6 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView1"
                     android:layout_marginTop="14dp"
-                    android:layout_toLeftOf="@+id/text_alamat_detail"
                     android:text="detail" />
 
                 <TextView
@@ -126,7 +130,7 @@
                     android:text="@string/lorem_ipsum"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </RelativeLayout>
+            </ScrollView>
         </RelativeLayout>
     </LinearLayout>
-
 </RelativeLayout>

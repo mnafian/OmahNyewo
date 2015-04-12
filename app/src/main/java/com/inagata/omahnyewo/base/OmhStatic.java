@@ -14,8 +14,8 @@ public class OmhStatic {
 	public static final String COORDINAT = "koordinat";
 	
 	//link url
-	public static final String URL_WS = "http://cdn.omahnyewo.com/servicelist.php?type=";
-	public static final String IMAGE_URL_WS = "http://cdn.omahnyewo.com/res/";
+	public static final String URL_WS = "http://www.nafian-labs.tk/omahnyewo/servicelist.php?type=";
+	public static final String IMAGE_URL_WS = "http://www.nafian-labs.tk/omahnyewo/res/";
 	
     //back pressed properties
     public static long back_pressed;

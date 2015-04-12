@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/mnafian/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.2.0/959c454243581fdf730abfd4f4745441724bcf2c/okhttp-2.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="959c454243581fdf730abfd4f4745441724bcf2c">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/okhttp-2.2.0-4f117d196e737f1b34765ddf3fb3df65cc845599.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-b14c8a6dd9bc79ef08f24e3d5e7170ff8ff13535.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/classes-574f03fae2c8e03cc8d47c0dcfe52eba4137c7c2.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-5d114d1733bb9036dfa8172fe10a2436e3a6fbfc.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.specyci/residemenu/1.6/libs/nineoldandroids-library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/nineoldandroids-library-2.4.0-5e7c6ef4f294eeaa2ba9f6882cc93ca8641bee26.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/classes-9f33ce10039636727f14c18561eb58343c770654.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/Documents/sdk-android/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-2959d9902f4affe4a04ece51f7fa89f2edac7ba1.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.github.ksoichiro/android-observablescrollview/1.5.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/classes-03f8e47b7fc418abbf2184135173d2bdebd6c474.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/classes-6487d75b015640218cf1d296f6907e778b4135b2.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/classes-727daf4c2118544d2a94a62f8e65837f7e9e99c4.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.2.0/c0b52915a48fa91b1b94a28d4a2997bac5f524df/okio-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c0b52915a48fa91b1b94a28d4a2997bac5f524df">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/okio-1.2.0-9bde40a1baf7756f627fa837c39c196ac1437544.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/exploded-aar/com.specyci/residemenu/1.6/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5e309b1df3051abebbfda31d1c80cd19bec617da">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/classes-bd86b73c2b26a8e33c0a37f2c3be2228a8ce7c0a.jar" />
+    </item>
+    <item
+        jar="/Users/mnafian/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp-urlconnection/2.2.0/cb20062e14c523637b7643295418097b48cccec2/okhttp-urlconnection-2.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cb20062e14c523637b7643295418097b48cccec2">
+        <dex dex="/Users/mnafian/AndroidStudioProjects/OmahNyewo/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-2.2.0-9a346a2c5ee0ad1aaad592d10e47fac240955414.jar" />
+    </item>
+
+</items>
