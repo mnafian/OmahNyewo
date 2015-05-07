@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="0dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.00"
+            android:background="@drawable/omh_kontrak"
+            android:clickable="true"
+            android:padding="0dp" >
+
+            <RelativeLayout
+                android:id="@+id/first_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="launchFirst" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_image" />
+
+                <TextView
+                    android:id="@+id/first_frame_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:alpha="1"
+                    android:padding="5dp"
+                    android:text="@string/header_text_kontrakan"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/first_frame_subtitle_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/first_frame_title_label"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:padding="5dp"
+                    android:text="@string/small_text_kontrakan"
+                    android:textAlignment="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.00"
+            android:background="@drawable/omh_kost"
+            android:clickable="true"
+            android:padding="0dp" >
+
+            <RelativeLayout
+                android:id="@+id/second_part_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="launchSecond" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_image" />
+
+                <TextView
+                    android:id="@+id/second_frame_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:alpha="1"
+                    android:padding="5dp"
+                    android:text="@string/header_text_kost"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/second_frame_subtitle_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/second_frame_title_label"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:alpha="1"
+                    android:padding="5dp"
+                    android:text="@string/small_text_kost"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

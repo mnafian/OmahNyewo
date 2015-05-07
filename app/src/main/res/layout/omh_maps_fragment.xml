@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.inagata.omahnyewo.base.OmhHorizontalListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent" >
+    </com.inagata.omahnyewo.base.OmhHorizontalListView>
+
+    <RelativeLayout
+        android:id="@+id/frameMaps"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/listview" >
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.google.android.gms.maps.MapView>
+
+        <ImageButton
+            android:id="@+id/myMapLocationButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:background="@android:color/white"
+            android:contentDescription="@string/my_location"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bt_nearby" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

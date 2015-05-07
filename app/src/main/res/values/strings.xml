@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Omah Nyewo</string>
+    <string name="action_settings">Settings</string>
+    <string name="version">Versi 0.2 Beta</string>
+    <string name="company">Inagata Technosmith © 2015</string>
+    
+    <!-- asset text -->
+     
+    <string name="header_text_kontrakan">Rumah Kontrakan</string>
+    <string name="small_text_kontrakan">Cari Semua Info Tentang Kontrakan</string>
+    <string name="header_text_kost">Rumah Kost</string>
+    <string name="small_text_kost">Cari Semua Info Tentang Rumah Kost</string>
+    <string name="about_tittle">Omah Nyewo</string>
+    <string name="header_login_text">Silahkan Login Untuk Memasang Iklan di OmahNyewo.com</string>
+    
+    
+    <!--  content description -->
+    <string name="image_about">Asset Image About</string>
+    <string name="my_location">My Location</string>
+    
+
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/page_atas"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.00"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/layout_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" >
+
+                <ImageView
+                    android:id="@+id/image_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/omh_kost" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_price_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Rp 100000/Tahun"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/primary_material_dark"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_alamat_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_price_detail"
+                android:layout_centerHorizontal="true"
+                android:text="Perum Gajayana Nomor 50 Malang"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/primary_material_dark" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.00"
+            android:padding="0dp" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/page_bawah"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/mini_fasilitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:text="Fasilitas"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/primary_material_dark" />
+
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@android:color/black" >
+
+                    <com.inagata.omahnyewo.base.OmhHorizontalListView
+                        android:id="@+id/listdetailview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="120dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/logo_fas"
+                        android:background="@android:color/black" >
+                    </com.inagata.omahnyewo.base.OmhHorizontalListView>
+                    
+                </android.support.v4.view.ViewPager>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pager"
+                    android:layout_marginTop="15dp"
+                    android:text="Deskripsi :"
+                    android:textColor="@color/primary_material_dark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/primary_material_dark" />
+
+                <Button
+                    android:id="@+id/sharebbm"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/detail_des"
+                    android:text="Share to BBM" />
+            </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
