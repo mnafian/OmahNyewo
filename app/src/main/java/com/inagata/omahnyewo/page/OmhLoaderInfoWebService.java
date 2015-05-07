@@ -1,13 +1,5 @@
 package com.inagata.omahnyewo.page;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -32,24 +24,32 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.inagata.omahnyewo.R;
 import com.inagata.omahnyewo.adapter.OmhItemListAdapter;
 import com.inagata.omahnyewo.base.OmhDetailActivity;
 import com.inagata.omahnyewo.base.OmhStatic;
-import com.inagata.omahnyewo.R;
 import com.inagata.omahnyewo.service.GifAnimationDrawable;
 import com.inagata.omahnyewo.service.OmhGpsService;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 @SuppressLint("ValidFragment")
 public class OmhLoaderInfoWebService extends ListFragment {
 
-	private BaseAdapter mAdapter;
-	private GifAnimationDrawable little;
 	public static ImageView loaderInfo;
 	public static int topPosition;
 	public ArrayList<HashMap<String, String>> listDetail;
+	private BaseAdapter mAdapter;
+	private GifAnimationDrawable little;
 	private String keyCode;
 
 	private OmhGpsService gpsService;
@@ -62,13 +62,28 @@ public class OmhLoaderInfoWebService extends ListFragment {
 
 	private SwipeRefreshLayout swipeView = null;
 	private Handler handler = new Handler();
+	private final Runnable refreshing = new Runnable() {
+		public void run() {
+			try {
+				// TODO : isRefreshing should be attached to your data request
+				// status
+				if (statusRefresh == true) {
+					// re run the verification after 1 second
+					handler.postDelayed(this, 5000);
+				} else {
+					// stop the animation after the data is fully loaded
+					swipeView.setRefreshing(false);
+					omhList.clear();
+					new LoadDataOmh().execute();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	};
 
-	public String getLink_url() {
-		return link_url;
-	}
-
-	public void setLink_url(String link_url) {
-		this.link_url = link_url;
+	public OmhLoaderInfoWebService(String id) {
+		keyCode = id;
 	}
 
 	public static boolean checkConnection(Context context) {
@@ -81,6 +96,14 @@ public class OmhLoaderInfoWebService extends ListFragment {
 			return true;
 		} else
 			return false;
+	}
+
+	public String getLink_url() {
+		return link_url;
+	}
+
+	public void setLink_url(String link_url) {
+		this.link_url = link_url;
 	}
 
 	@Override
@@ -100,10 +123,6 @@ public class OmhLoaderInfoWebService extends ListFragment {
 			gpsService.showSettingAlert();
 		}
 
-	}
-
-	public OmhLoaderInfoWebService(String id) {
-		keyCode = id;
 	}
 
 	@Override
@@ -155,31 +174,11 @@ public class OmhLoaderInfoWebService extends ListFragment {
 		});
 	}
 
-	private final Runnable refreshing = new Runnable() {
-		public void run() {
-			try {
-				// TODO : isRefreshing should be attached to your data request
-				// status
-				if (statusRefresh == true) {
-					// re run the verification after 1 second
-					handler.postDelayed(this, 5000);
-				} else {
-					// stop the animation after the data is fully loaded
-					swipeView.setRefreshing(false);
-					omhList.clear();
-					new LoadDataOmh().execute();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-	};
-
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		// TODO Auto-generated method stub
-		Toast.makeText(getActivity(), "Diklik di posisi= " + position,
-				Toast.LENGTH_LONG).show();
+		//Toast.makeText(getActivity(), "Diklik di posisi= " + position,
+		//		Toast.LENGTH_LONG).show();
 		super.onListItemClick(l, v, position, id);
 		Intent sendToDetail = new Intent(getActivity(),
 				OmhDetailActivity.class);
@@ -233,6 +232,8 @@ public class OmhLoaderInfoWebService extends ListFragment {
 			super.onPreExecute();
 			Toast.makeText(getActivity(), getLink_url(), Toast.LENGTH_LONG)
 					.show();
+			Log.d("Link URL", getLink_url());
+
 			try {
 				little = new GifAnimationDrawable(getResources()
 						.openRawResource(R.raw.preloader_1));
@@ -251,10 +252,12 @@ public class OmhLoaderInfoWebService extends ListFragment {
 
 				Request request = new Request.Builder().url(getLink_url())
 						.build();
+				Log.d("Request", request.toString());
 				Response response = clientRest.newCall(request).execute();
 				String responsedata = response.body().string();
 
 				JSONArray callData = new JSONArray(responsedata);
+				Log.d("Jumlah Data", String.valueOf(callData.length()));
 				if (callData != null) {
 					for (int i = 0; i < callData.length(); i++) {
 						JSONObject objData = callData.getJSONObject(i);

@@ -17,7 +17,7 @@
             android:background="@color/action_bar_white" >
 
             <Button
-                android:id="@+id/title_bar_left_menu"
+                android:id="@+id/tittle_bar_back"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="left|center_vertical"

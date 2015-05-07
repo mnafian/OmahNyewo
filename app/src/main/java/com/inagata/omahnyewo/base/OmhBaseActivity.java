@@ -1,18 +1,12 @@
 package com.inagata.omahnyewo.base;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +16,7 @@ import com.inagata.omahnyewo.page.OmhAboutPage;
 import com.inagata.omahnyewo.page.OmhLoaderInfoWebService;
 import com.inagata.omahnyewo.page.OmhMainPage;
 import com.inagata.omahnyewo.page.OmhMapsLoaderPage;
+import com.inagata.omahnyewo.service.OmhGpsService;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
 
@@ -36,14 +31,24 @@ public class OmhBaseActivity extends Activity implements View.OnClickListener {
 	private TextView headerTittle;
 	private PopupWindow popupWin;
 
+	private OmhGpsService gpsService;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.omh_frame_base);
 		headerTittle = (TextView) findViewById(R.id.tittle_header);
 		mContext = this;
-		setUpMenuLoader();
-		changeFragment(new OmhMainPage());
+
+		gpsService = new OmhGpsService(this);
+		if (gpsService.canGetLocation()) {
+			setUpMenuLoader();
+			changeFragment(new OmhMainPage());
+		} else {
+			gpsService.showSettingAlert();
+		}
+
+
 	}
 
 	private void setUpMenuLoader() {
@@ -85,30 +90,6 @@ public class OmhBaseActivity extends Activity implements View.OnClickListener {
 
 					@Override
 					public void onClick(View arg0) {
-						// TODO Auto-generated method stub
-						boolean isShowing = false;
-						popupWin = null;
-
-						if (isShowing) {
-							if (popupWin != null && popupWin.isShowing()) {
-								popupWin.dismiss();
-							}
-							isShowing = false;
-						} else {
-							LayoutInflater inflater = (LayoutInflater) getBaseContext()
-									.getSystemService(LAYOUT_INFLATER_SERVICE);
-							View popupSettingWindow = inflater.inflate(
-									R.layout.omh_setting_dropdown, null);
-							popupSettingWindow.setBackgroundColor(Color.GRAY);
-							popupWin = new PopupWindow(popupSettingWindow,
-									LayoutParams.WRAP_CONTENT,
-									LayoutParams.WRAP_CONTENT, true);
-							popupWin.setOutsideTouchable(false);
-							popupWin.setFocusable(true);
-							popupWin.showAtLocation(popupSettingWindow,
-									Gravity.RIGHT, 0, 0);
-							isShowing = true;
-						}
 
 					}
 				});

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,13 +30,21 @@ public class OmhDetailActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.omh_frame_detail);
 		headerTittle = (TextView) findViewById(R.id.tittle_header);
+		Button backButton = (Button) findViewById(R.id.tittle_bar_back);
+
+		backButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 
 		Bundle bundle = getIntent().getParcelableExtra(OmhStatic.COORDINAT);
 		Intent in = getIntent();
-		description = (String) in.getStringExtra(OmhStatic.DESCRIPTION);
-		imageName = (String) in.getStringExtra(OmhStatic.IMAGE);
-		pricePlace = (String) in.getStringExtra(OmhStatic.PLACE_PRICE);
-		addressPlace = (String) in.getStringExtra(OmhStatic.LOCATION);
+		description = in.getStringExtra(OmhStatic.DESCRIPTION);
+		imageName = in.getStringExtra(OmhStatic.IMAGE);
+		pricePlace = in.getStringExtra(OmhStatic.PLACE_PRICE);
+		addressPlace = in.getStringExtra(OmhStatic.LOCATION);
 
 		changeFragment(new OmhDetailPage(imageName, pricePlace, addressPlace,
 				description));
@@ -52,9 +61,12 @@ public class OmhDetailActivity extends Activity {
 
 		private ImageView imageNameView;
 		private TextView textPrice, textAddress, textdetail;
+		private Button btBBM;
 
 		private String nameImage, priceOemah, addressOemah, omah_desc;
 		private String[] fasilitasOemah;
+
+		private OmhHorizontalListView listview;
 
 		public OmhDetailPage(String image, String price, String address,
 				String detail) {
@@ -74,9 +86,25 @@ public class OmhDetailActivity extends Activity {
 			textPrice = (TextView) view.findViewById(R.id.text_price_detail);
 			textAddress = (TextView) view.findViewById(R.id.text_alamat_detail);
 			textdetail = (TextView) view.findViewById(R.id.detail_des);
+			listview = (OmhHorizontalListView) view.findViewById(R.id.listdetailview);
+			btBBM = (Button) view.findViewById(R.id.sharebbm);
 
 			LoadImageDetail(nameImage, imageNameView);
 			LoadDetailPage(priceOemah, addressOemah, omah_desc);
+
+			btBBM.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					Intent sendIntent = new Intent();
+					sendIntent.setAction(Intent.ACTION_SEND);
+					sendIntent.putExtra(Intent.EXTRA_TEXT, addressOemah);
+					sendIntent.setType("text/plain");
+					sendIntent.setPackage("com.bbm");
+					startActivity(sendIntent);
+				}
+			});
+
+
 			return view;
 		}
 

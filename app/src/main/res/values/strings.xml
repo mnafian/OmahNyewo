@@ -3,8 +3,8 @@
 
     <string name="app_name">Omah Nyewo</string>
     <string name="action_settings">Settings</string>
-    <string name="version">Versi 0.1 Beta</string>
-    <string name="company">Qonky Studio © 2014</string>
+    <string name="version">Versi 0.2 Beta</string>
+    <string name="company">Inagata Technosmith © 2015</string>
     
     <!-- asset text -->
      
@@ -19,9 +19,6 @@
     <!--  content description -->
     <string name="image_about">Asset Image About</string>
     <string name="my_location">My Location</string>
-    
-    
-    <string name="lorem_ipsum"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et magna ut erat elementum cursus in quis ipsum. Nam faucibus ultrices eros, vel tempor leo semper sit amet. Duis magna quam, congue vitae interdum nec, condimentum ut lectus. Sed commodo venenatis eros a dignissim. Nunc adipiscing turpis nec magna venenatis at ultricies ipsum bibendum. Sed volutpat urna quis nisi vulputate egestas. Etiam eu dui a enim lacinia dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\n\nPhasellus orci mi, eleifend nec congue id, volutpat at neque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer semper velit vel leo rutrum sed fermentum elit porta.]]></string>
     
 
 </resources>

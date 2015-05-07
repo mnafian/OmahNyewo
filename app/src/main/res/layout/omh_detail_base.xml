@@ -10,10 +10,11 @@
         android:orientation="vertical" >
 
         <RelativeLayout
+            android:id="@+id/page_atas"
             android:layout_width="match_parent"
             android:layout_height="0dip"
             android:layout_weight="1.00"
-            android:padding="0dp" >
+            android:padding="15dp">
 
             <RelativeLayout
                 android:id="@+id/layout_image"
@@ -32,11 +33,12 @@
                 android:id="@+id/text_price_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/layout_image"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:layout_below="@id/layout_image"
                 android:text="Rp 100000/Tahun"
                 android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/primary_material_dark"
                 android:textSize="23sp"
                 android:textStyle="bold" />
 
@@ -47,17 +49,8 @@
                 android:layout_below="@+id/text_price_detail"
                 android:layout_centerHorizontal="true"
                 android:text="Perum Gajayana Nomor 50 Malang"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            <ImageView
-                android:id="@+id/logo_fas"
-                android:layout_width="wrap_content"
-                android:layout_height="10dp"
-                android:layout_below="@+id/text_alamat_detail"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/omh_line" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/primary_material_dark" />
 
         </RelativeLayout>
 
@@ -72,17 +65,20 @@
                 android:layout_height="match_parent">
 
             <RelativeLayout
+                android:id="@+id/page_bawah"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/mini_fasilitas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="0dp"
                     android:text="Fasilitas"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/primary_material_dark" />
 
 
                 <android.support.v4.view.ViewPager
@@ -110,6 +106,7 @@
                     android:layout_below="@+id/pager"
                     android:layout_marginTop="15dp"
                     android:text="Deskripsi :"
+                    android:textColor="@color/primary_material_dark"
                     android:textStyle="bold" />
 
                 <TextView
@@ -118,17 +115,14 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView1"
                     android:layout_marginTop="14dp"
-                    android:text="detail" />
+                    android:textColor="@color/primary_material_dark" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView1"
+                <Button
+                    android:id="@+id/sharebbm"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
                     android:layout_below="@+id/detail_des"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/lorem_ipsum"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:text="Share to BBM" />
             </RelativeLayout>
             </ScrollView>
         </RelativeLayout>
