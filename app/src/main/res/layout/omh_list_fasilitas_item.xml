@@ -11,6 +11,6 @@
         android:layout_height="20dp"
         android:padding="5dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/omh_kost" />
+        android:src="@drawable/bed" />
 
 </LinearLayout>

@@ -3,18 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/layout_top"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:background="@color/action_bar_white" >
+            android:background="@color/action_bar_white">
 
             <Button
                 android:id="@+id/title_bar_left_menu"
@@ -55,7 +55,6 @@
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
-    </FrameLayout>
+        android:orientation="vertical"></FrameLayout>
 
 </LinearLayout>

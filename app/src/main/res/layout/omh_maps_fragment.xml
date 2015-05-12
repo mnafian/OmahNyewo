@@ -1,45 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <com.inagata.omahnyewo.base.OmhHorizontalListView
-        android:id="@+id/listview"
-        android:layout_width="fill_parent"
-        android:layout_height="120dp"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/transparent" >
-    </com.inagata.omahnyewo.base.OmhHorizontalListView>
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="40dp"
+        sothree:umanoParalaxOffset="100dp"
+        sothree:umanoShadowHeight="4dp">
 
-    <RelativeLayout
-        android:id="@+id/frameMaps"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/listview" >
+        <RelativeLayout
+            android:id="@+id/frameMaps"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/listview">
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/mapContainer"
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.google.android.gms.maps.MapView>
+
+            <ImageButton
+                android:id="@+id/myMapLocationButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:adjustViewBounds="true"
+                android:alpha="0.8"
+                android:background="@android:color/white"
+                android:contentDescription="@string/my_location"
+                android:padding="2dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/bt_nearby" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dragView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-        </com.google.android.gms.maps.MapView>
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/myMapLocationButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-            android:adjustViewBounds="true"
-            android:alpha="0.8"
-            android:background="@android:color/white"
-            android:contentDescription="@string/my_location"
-            android:padding="2dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/bt_nearby" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
 
-    </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="12dp"
+                    android:text="Slide Up to View Content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+
+                <com.inagata.omahnyewo.base.OmhHorizontalListView
+                    android:id="@+id/listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"></com.inagata.omahnyewo.base.OmhHorizontalListView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 
 </RelativeLayout>

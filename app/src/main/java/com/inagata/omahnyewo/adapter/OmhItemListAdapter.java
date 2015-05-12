@@ -17,58 +17,58 @@ import java.util.HashMap;
 
 public class OmhItemListAdapter extends BaseAdapter {
 
-	private final ArrayList<HashMap<String, String>> urls;
-	private Context mContext;
-	private LayoutInflater inflater;
-	private HashMap<String, String> resultp;
+    private final ArrayList<HashMap<String, String>> urls;
+    private Context mContext;
+    private LayoutInflater inflater;
+    private HashMap<String, String> resultp;
 
-	public OmhItemListAdapter(Context context,
-			ArrayList<HashMap<String, String>> items) {
-		mContext = context;
-		urls = items;
-		resultp = new HashMap<String, String>();
-	}
+    public OmhItemListAdapter(Context context,
+                              ArrayList<HashMap<String, String>> items) {
+        mContext = context;
+        urls = items;
+        resultp = new HashMap<String, String>();
+    }
 
-	@Override
-	public int getCount() {
-		// TODO Auto-generated method stub
-		return urls.size();
-	}
+    @Override
+    public int getCount() {
+        // TODO Auto-generated method stub
+        return urls.size();
+    }
 
-	@Override
-	public Object getItem(int position) {
-		// TODO Auto-generated method stub
-		return position;
-	}
+    @Override
+    public Object getItem(int position) {
+        // TODO Auto-generated method stub
+        return position;
+    }
 
-	@Override
-	public long getItemId(int position) {
-		// TODO Auto-generated method stub
-		return getItem(position).hashCode();
-	}
+    @Override
+    public long getItemId(int position) {
+        // TODO Auto-generated method stub
+        return getItem(position).hashCode();
+    }
 
-	@SuppressLint("NewApi")
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
+    @SuppressLint("NewApi")
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        // TODO Auto-generated method stub
 
-		ImageView imageItem;
-        
-		inflater = (LayoutInflater) mContext
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        ImageView imageItem;
 
-		View view = inflater.inflate(R.layout.omh_list_base_item, parent,
-				false);
-		resultp = urls.get(position);
-		imageItem = (ImageView) view.findViewById(R.id.image_item_launch);
+        inflater = (LayoutInflater) mContext
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View view = inflater.inflate(R.layout.omh_list_base_item, parent,
+                false);
+        resultp = urls.get(position);
+        imageItem = (ImageView) view.findViewById(R.id.image_item_launch);
 
 
-		Picasso.with(mContext)
-				.load(OmhStatic.IMAGE_URL_WS + resultp.get(OmhStatic.IMAGE))
-				.placeholder(R.drawable.border_radius).error(R.drawable.border_radius).fit()
-				.centerCrop().into(imageItem);
-		return view;
+        Picasso.with(mContext)
+                .load(OmhStatic.IMAGE_URL_WS + resultp.get(OmhStatic.IMAGE))
+                .placeholder(R.drawable.border_radius).error(R.drawable.border_radius).fit()
+                .centerCrop().into(imageItem);
+        return view;
 
-	}
+    }
 
 }

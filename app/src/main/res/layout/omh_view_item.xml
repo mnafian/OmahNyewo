@@ -3,8 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@color/background_abu"
-    android:orientation="vertical"
-     >
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageGallery"

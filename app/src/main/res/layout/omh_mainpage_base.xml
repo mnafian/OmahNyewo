@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="0dp" >
+    android:padding="0dp">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:baselineAligned="false"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -16,13 +16,13 @@
             android:layout_weight="1.00"
             android:background="@drawable/omh_kontrak"
             android:clickable="true"
-            android:padding="0dp" >
+            android:padding="0dp">
 
             <RelativeLayout
                 android:id="@+id/first_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:onClick="launchFirst" >
+                android:onClick="launchFirst">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -63,13 +63,13 @@
             android:layout_weight="1.00"
             android:background="@drawable/omh_kost"
             android:clickable="true"
-            android:padding="0dp" >
+            android:padding="0dp">
 
             <RelativeLayout
                 android:id="@+id/second_part_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:onClick="launchSecond" >
+                android:onClick="launchSecond">
 
                 <ImageView
                     android:layout_width="match_parent"

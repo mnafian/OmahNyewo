@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/bg_image" >
+        android:background="@drawable/bg_image">
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:inputType="textEmailAddress" >
+        android:inputType="textEmailAddress">
 
         <requestFocus />
     </EditText>
@@ -56,8 +56,8 @@
         android:layout_below="@+id/loginButton"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="29dp"
-        android:text="Lupa Password?"
-        android:linksClickable="true" />
+        android:linksClickable="true"
+        android:text="Lupa Password?" />
 
     <TextView
         android:id="@+id/createAccount"
@@ -66,16 +66,16 @@
         android:layout_below="@+id/forgotPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
-        android:text="Buat Akun Baru"
-        android:linksClickable="true" />
+        android:linksClickable="true"
+        android:text="Buat Akun Baru" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@+id/createAccount"
-        android:background="@drawable/bg_image"
-        android:layout_marginTop="20dp" >
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_image">
 
         <Button
             android:id="@+id/button1"
